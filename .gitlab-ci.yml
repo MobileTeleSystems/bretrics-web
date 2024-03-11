@@ -1,0 +1,19 @@
+stages:
+    - build
+
+build-components:
+    stage: build
+    image:
+        name: central-mirror.services.mts.ru/node:19-alpine
+    rules:
+        - if: $CI_COMMIT_BRANCH == "main"
+          variables:
+              CI_NPM_TAG: "latest"
+        - if: $CI_COMMIT_BRANCH == "develop"
+          variables:
+              CI_NPM_TAG: "dev"
+    script:
+        - npm ci
+        - echo "//${MTS_NPM_BASEURL}/:_authToken=${MTS_NPM_USER_TOKEN}" >> .npmrc
+        - npm run build
+        - npm publish --tag $CI_NPM_TAG
