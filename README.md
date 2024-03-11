@@ -3,7 +3,7 @@
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
 [![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/LabEG/reca/blob/main/LICENSE)
 
-# WebMon - Realtime user WebMonitoring
+# Bretrics - Realtime user Browser Monitoring
 
 Monitor the performance of the user's browser and code for real users. Allows you to collect WebVitals metrics, performance and business metrics through the Prometheuse monitoring system.
 
@@ -36,10 +36,10 @@ yarn add @mts-pjsc/bretrics
 The package has a pre-configured monitoring mode that includes the necessary webvitals metrics.
 
 ``` typescript
-import {webmon} from "@mts-pjsc/bretrics";
+import {bretrics} from "@mts-pjsc/bretrics";
 
-webmon
-    .setup({apiPath: "/webmon"}) // <-- microservice deploy location
+bretrics
+    .setup({apiPath: "/bretrics"}) // <-- microservice deploy location
     .useDefaultMonitoring()
     .sendMetrics({my_metric: 5}); // <-- custom metrics
 ```
@@ -51,10 +51,10 @@ If you need to send custom metric, you must use the `sendMetrics` method.
 Prometheus labels can be set as default for all metrics, or individually for each value.
 
 ``` typescript
-import {webmon} from "@mts-pjsc/bretrics";
+import {bretrics} from "@mts-pjsc/bretrics";
 
-webmon
-    .setup({apiPath: "/webmon"})
+bretrics
+    .setup({apiPath: "/bretrics"})
     .useDefaultMonitoring()
     .setLabels({stage: "beta", path: location.pathname})
     .sendMetrics({
@@ -67,14 +67,14 @@ webmon
 
 The default labels will be added to the metrics if you didn't pass them in the `sendMetrics` method.
 
-### Example WebMonitoring customization
+### Example Bretrics customization
 
 The library exports the web monitoring constructor class, so you can inherit from it and implement logic according to OOP principles.
 
 ``` typescript
-import {WebMonitoring} from "@mts-pjsc/bretrics";
+import {Bretrics} from "@mts-pjsc/bretrics";
 
-export class WebMonitoringService extends WebMonitoring {
+export class BretricsService extends Bretrics {
 
     public override sendMetrics (metric: Record<string, number>): this {
         super.sendMetrics(metric);

@@ -2,9 +2,9 @@ import type {Metric} from "web-vitals";
 import {onLCP, onFID, onCLS, onFCP, onINP, onTTFB} from "web-vitals";
 import type {IMetric} from "./interfaces/IMetric";
 
-export class WebMonitoring {
+export class Bretrics {
 
-    public apiPath: string = "/webmon";
+    public apiPath: string = "/bretrics";
 
     public labels: Record<string, number | string> = {};
 
@@ -120,6 +120,7 @@ export class WebMonitoring {
         return sendMetrics;
     }
 
+    // eslint-disable-next-line @typescript-eslint/class-methods-use-this
     protected getDeviceType (): string {
         const ua = navigator.userAgent;
         if ((/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/iu).test(ua)) {
@@ -135,5 +136,4 @@ export class WebMonitoring {
 
 }
 
-export const webmonitoring = new WebMonitoring();
-export const webmon = webmonitoring;
+export const bretrics = new Bretrics();
