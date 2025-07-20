@@ -5,7 +5,7 @@
 
 # Bretrics - Realtime user Browser Monitoring
 
-Monitor the performance of the user's browser and code for real users. Allows you to collect WebVitals metrics, performance and business metrics through the Prometheuse monitoring system.
+Monitor the performance of the user's browser and code for real users. Allows you to collect WebVitals metrics, performance and business metrics through the Prometheus monitoring system.
 
 ## Features
 
@@ -15,7 +15,7 @@ Monitor the performance of the user's browser and code for real users. Allows yo
 - **Network Metrics** - allows you to evaluate the quality of the connection from clients to your servers,
 - **Leaks Detection** - allows you to detect leaks in DOM elements, listeners, js and others.
 
-## Instalation
+## Installation
 
 npm:
 
