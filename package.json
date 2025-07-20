@@ -18,7 +18,7 @@
     "test": "mocha --parallel src/__tests__/*.spec.tsx",
     "test:watch": "mocha --parallel --watch --watch-files src/**/*.ts,src/**/*.tsx src/__tests__/*.spec.tsx",
     "test:module": "node ./dist/index.js",
-    "release": "cliff-jumper --name '@mts-pjsc/image-optimize' --package-path '.' --no-skip-changelog --no-skip-tag",
+    "release": "cliff-jumper --name '@mts-pjsc/bretrics' --package-path '.' --no-skip-changelog --no-skip-tag",
     "prepublishOnly": "npm run test && npm run build",
     "prepare": "husky install"
   },
