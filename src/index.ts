@@ -1,5 +1,4 @@
-import type {Metric} from "web-vitals";
-import {onLCP, onFID, onCLS, onFCP, onINP, onTTFB} from "web-vitals";
+import {Metric, onLCP, onCLS, onFCP, onINP, onTTFB} from "web-vitals";
 import type {IMetric} from "./interfaces/IMetric";
 
 export class Bretrics {
@@ -10,7 +9,6 @@ export class Bretrics {
 
     public sendWebVitalsMetrics (): this {
         onLCP((metric: Metric) => this.sendWebVitals(metric));
-        onFID((metric: Metric) => this.sendWebVitals(metric));
         onCLS((metric: Metric) => this.sendWebVitals(metric));
         onFCP((metric: Metric) => this.sendWebVitals(metric));
         onINP((metric: Metric) => this.sendWebVitals(metric));
@@ -75,7 +73,7 @@ export class Bretrics {
         this.sendToMicroservice(webmonMetrics);
     }
 
-    // eslint-disable-next-line max-statements
+
     protected sendToMicroservice (metrics: Record<string, IMetric | number>): void {
         const path = `${this.apiPath}/send-metrics/metrics`;
         const body = JSON.stringify(this.prepareData(metrics));
@@ -120,13 +118,16 @@ export class Bretrics {
         return sendMetrics;
     }
 
-    // eslint-disable-next-line @typescript-eslint/class-methods-use-this
+
+    // eslint-disable-next-line class-methods-use-this
     protected getDeviceType (): string {
         const ua = navigator.userAgent;
+        // eslint-disable-next-line prefer-named-capture-group
         if ((/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/iu).test(ua)) {
             return "tablet";
         }
         if (
+            // eslint-disable-next-line prefer-named-capture-group
             (/Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/u).test(ua)
         ) {
             return "mobile";
