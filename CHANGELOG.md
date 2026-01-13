@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.10] - 2026-01-13
+
+### ⚙️ Miscellaneous Tasks
+
+- Remove unnecessary permissions from npm-publish workflow and update README with Codacy badge
+
 ## [1.0.9] - 2026-01-13
 
 ### ⚙️ Miscellaneous Tasks
