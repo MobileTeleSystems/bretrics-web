@@ -60,7 +60,7 @@ representative at an online or offline event.
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
 reported to the community leaders responsible for enforcement at
-labeg@mail.ru or [discord server](https://discordapp.com/channels/974049080454045796/974049142022209566).
+[GitHub Issues](https://github.com/MobileTeleSystems/bretrics-web/issues).
 All complaints will be reviewed and investigated promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the
