@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.11] - 2026-01-13
+
+### ⚙️ Miscellaneous Tasks
+
+- Update reporting method in CODE_OF_CONDUCT to use GitHub Issues
+
 ## [1.0.10] - 2026-01-13
 
 ### ⚙️ Miscellaneous Tasks
