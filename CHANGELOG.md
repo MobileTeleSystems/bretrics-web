@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.12] - 2026-01-13
+
+### ⚙️ Miscellaneous Tasks
+
+- Remove .npmignore and update package.json to include files field
+
 ## [1.0.11] - 2026-01-13
 
 ### ⚙️ Miscellaneous Tasks
