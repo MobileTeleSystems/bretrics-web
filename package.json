@@ -20,7 +20,7 @@
     "test:module": "node ./dist/index.js",
     "release": "cliff-jumper --name '@mts-pjsc/bretrics' --package-path '.' --no-skip-changelog --no-skip-tag",
     "prepublishOnly": "npm run test && npm run build",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "keywords": [
     "metrics",
