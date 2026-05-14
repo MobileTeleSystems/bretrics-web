@@ -38,8 +38,8 @@
     "web-vitals": "^5.1.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.1.0",
-    "@commitlint/config-conventional": "^20.0.0",
+    "@commitlint/cli": "^21.0.1",
+    "@commitlint/config-conventional": "^21.0.1",
     "@favware/cliff-jumper": "^6.0.0",
     "@labeg/code-style": "^6.10.3",
     "@types/chai": "^5.2.3",
